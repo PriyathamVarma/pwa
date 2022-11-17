@@ -52,17 +52,28 @@ Apps that are capable of behaving like Native Mobile apps but still can be coded
 > name is for the main name of the app
 
 > short_name is for the short name
+
 > start_url is for the first page to show when the app starts
+
 > scope is for showing pages in PWA
+
 > display is for showing the app as PWA. We can also choose to show the app in different formats
+ 
 > background_color is for the background color when the app starts loading
+ 
 > description is for the description of the app
+ 
 > dir is direction for the app. ltr is leftto right which is default for most countries
+ 
 > lang is for the language
+
 > orientation is for the orientation of the app
+ 
 > icons is for the main icon of the app
 
+
 3. Add the file path to the html file
+4. 
 
 ## Service workers
 
