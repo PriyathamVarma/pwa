@@ -90,6 +90,73 @@ Apps that are capable of behaving like Native Mobile apps but still can be coded
 
 ## Service workers
 
+1. Allows to have many native app features
+2. Allows to have offline features
+
+Steps
+
+* Registering
+1. Go to public folder and create sw.js
+2. Go to a js file and enter
+```
+if('serviceWorker' in navigator){
+    navigator.serviceWorker.register('/sw.js',{})
+    .then(()=>{
+        console.log('Registered')
+    });
+}else{
+    console.log('Service worker not found');
+}
+
+```
+
+3. check in application to cross check for service workers instllation
+
+
+* Reacting to events
+
+1. Add this code to the js file
+```
+if('serviceWorker' in navigator){
+    navigator.serviceWorker.register('/sw.js',{scope:'/help/'})
+    .then(()=>{
+        console.log('Registered')
+    });
+}else{
+    console.log('Service worker not found');
+}
+
+```
+2. Add this to the service worker file --> sw.js
+```
+
+self.addEventListener('install',function(event){
+    console.log('Service worker Installing',event);
+})
+
+self.addEventListener('activate',function(event){
+    console.log('Service worker Activating',event);
+    return self.clients.claim();
+})
+
+```
+
+* Non-lifecyle events
+
+1. add the below code in sw.js to check for the event
+```
+
+// Non-lifecycle events
+self.addEventListener('fetch',function(event){
+    console.log('[Service worker] Fetching',event);
+});
+// for responding with customised fetch rqeuests
+    event.respondWith(fetch(event.request));
+
+```
+
+
+
 ## Promises and Fetch API
 
 ## Service worker caching
