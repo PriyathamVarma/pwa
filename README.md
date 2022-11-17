@@ -50,6 +50,7 @@ Apps that are capable of behaving like Native Mobile apps but still can be coded
 
 ```
 > name is for the main name of the app
+
 > short_name is for the short name
 > start_url is for the first page to show when the app starts
 > scope is for showing pages in PWA
