@@ -72,8 +72,21 @@ Apps that are capable of behaving like Native Mobile apps but still can be coded
 > icons is for the main icon of the app
 
 
-3. Add the file path to the html file
-4. 
+3. Add the file path to the html file using ``` <link rel="manifest"   href="/manifest.json"> ```
+4. Add 
+
+``` 
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="VDapp">
+  <link rel="apple-touch-icon" href="./src/images/icons/app-icon-144x144.png" sizes="144x144">
+  <meta name="msapplication-TileImage" content="./src/images/icons/app-icon-144x144.png">
+  <meta name="msapplication-TileColor" content="white">
+  <meta name="theme-color" content="blue">
+ ``` 
+ for apple devices compatability
+
+5. Add this links to all the html files 
 
 ## Service workers
 
